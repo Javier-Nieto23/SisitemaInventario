@@ -8,9 +8,9 @@
     "license": "MIT",
     "type": "project",
     "require": {
-        "php": ">=8.0.0",
+        "php": ">=7.0.0",
         "fideloper/proxy": "~3.3",
-        "laravel/framework": "12.*",
+        "laravel/framework": "5.5.*",
         "laravel/tinker": "~1.0"
     },
     "require-dev": {
@@ -59,6 +59,7 @@
         "sort-packages": true,
         "optimize-autoloader": true,
         "allow-plugins": {
+            "kylekatarnls/update-helper": true,
             "symfony/thanks": true
         }
     }

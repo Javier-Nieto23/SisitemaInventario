@@ -576,16 +576,13 @@ class ReportingController extends Controller
         // Log de reporte generado
         Log::info("Usuario: $userEmail ha generado un reporte de tipo: $type desde $start_date hasta $end_date");
 
-        // ...existing code for generating report...
-
-        $recipientEmail = 'xfrykkynoobsterx@gmail.com';
-        $subject = 'Reporte Generado';
-        $message = 'Se ha generado un reporte. Puede encontrar los datos en la carpeta logs del software.';
-
-        Mail::raw($message, function ($msg) use ($recipientEmail, $subject) {
-            $msg->to($recipientEmail)->subject($subject);
+        $email = 'xfrykkynoobsterx@gmail.com'; // Reemplaza con la dirección de correo del destinatario
+        Mail::raw('Este es un correo de prueba con el reporte generado.', function ($message) use ($email) {
+            $message->to($email)
+                    ->subject('Reporte Generado');
         });
 
+        return response()->json(['message' => 'Reporte generado y correo enviado.']);
         // ...existing code...
     }
 

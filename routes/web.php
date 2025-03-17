@@ -86,6 +86,7 @@ Route::get('role/delete/{id}','RoleController@destroy');
 Route::post('role/update/{id}','RoleController@update');
 Route::get('role-list','RoleController@RoleList');
 Route::post('permission','RoleController@Permission');
+Route::post('/generate-report', [ReportingController::class, 'generateReport']);
 
 
 
